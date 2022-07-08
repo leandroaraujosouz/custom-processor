@@ -27,11 +27,12 @@ jobs:
       
   deployment:
     runs-on: ubuntu-latest
+    environment: env
     steps:
     - name: Deploy Stage
       uses: fjogeleit/http-request-action@v1
       with:
-        url: ${{ env.secrets.URL }}
+        url: ${{ secrets.URL }}
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
         data: '{"text": "teste"}'
