@@ -31,7 +31,7 @@ jobs:
     - name: Deploy Stage
       uses: fjogeleit/http-request-action@v1
       with:
-        url: ${{ secrets.URL }}
+        url: ${{ env.secrets.URL }}
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
         data: '{"text": "teste"}'
