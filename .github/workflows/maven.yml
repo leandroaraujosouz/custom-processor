@@ -20,4 +20,4 @@ jobs:
         url: ${{ secrets.URL }}
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
-        data: '{"text": "${{autor: \n github.actor }}"}'
+        data: '{"text": "${{autor: \ngithub.actor }}"}'
