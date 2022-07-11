@@ -35,4 +35,4 @@ jobs:
         url: ${{ secrets.URL }}
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
-        data: '{"text": ${{ github }}}'
+        data: '{"text": "${{ github }}"}'
