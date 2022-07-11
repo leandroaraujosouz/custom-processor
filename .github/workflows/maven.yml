@@ -20,4 +20,4 @@ jobs:
         url: ${{ secrets.URL }}
         method: 'POST'
         customHeaders: '{"Content-Type": "application/json"}'
-        data: '{"text": "Autor: ${{ github.actor }}\nJob: ${{ github.job }}\nRef: ${{ github.ref }}\nSha: ${{ github.sha }}\nRepository: ${{ github.repository }}\n"}'
+        data: '{"text": "Autor: ${{ github.actor }}\nBranch: ${{ github.ref_name }}\nAlteração: https://github.com/${{ github.repository }}/commit/${{ github.sha }}\n"}'
